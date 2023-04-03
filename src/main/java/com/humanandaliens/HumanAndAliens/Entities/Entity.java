@@ -1,5 +1,8 @@
 package com.humanandaliens.HumanAndAliens.Entities;
 
+import com.humanandaliens.HumanAndAliens.Entities.Items.Armor;
+import com.humanandaliens.HumanAndAliens.Entities.Items.Weapon;
+
 public class Entity {
     private String name;
     private int health;
@@ -7,6 +10,10 @@ public class Entity {
     private int attack;
 
     private int level;
+
+    private Armor armor;
+
+    private Weapon weapon;
 
     public Entity(String name) {
         this.name = name;

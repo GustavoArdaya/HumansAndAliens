@@ -1,5 +1,6 @@
 package com.humanandaliens.HumanAndAliens.Entities;
 
+import com.humanandaliens.HumanAndAliens.Entities.Items.Weapon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,9 +10,10 @@ class AlienTest {
 
     Alien testAlien = new Alien("Test Alien");
     Human testHuman = new Human("Test Human");
+    Weapon blaster = new Weapon("Blaster", 1.5);
     @BeforeEach
     void setUp() {
-
+        testAlien.setWeapon(blaster);
     }
 
     @Test
@@ -28,16 +30,16 @@ class AlienTest {
 
     @Test
     void alienShouldReceiveDamage() {
-        testAlien.receiveDamage(20);
+        testAlien.receiveDamage(10d);
         var sut = testAlien.getHealth();
-        assertEquals(80,sut);
+        assertEquals(90,sut);
     }
 
     @Test
     void alienShouldDealDamage() {
-        testAlien.dealDamage(testHuman,20);
+        testAlien.dealDamage(testHuman,10d);
         var sut = testHuman.getHealth();
-        assertEquals(80, sut);
+        assertEquals(85, sut);
     }
 
 

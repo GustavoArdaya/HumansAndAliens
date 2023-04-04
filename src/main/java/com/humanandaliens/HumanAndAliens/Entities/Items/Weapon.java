@@ -2,11 +2,11 @@ package com.humanandaliens.HumanAndAliens.Entities.Items;
 
 public class Weapon {
     String name;
-    int damage;
+    Double damageMultiplier;
 
-    public Weapon(String name, int damage) {
+    public Weapon(String name, Double damageMultiplier) {
         this.name = name;
-        this.damage = damage;
+        this.damageMultiplier = damageMultiplier;
     }
 
     public String getName() {
@@ -17,11 +17,11 @@ public class Weapon {
         this.name = name;
     }
 
-    public int getDamage() {
-        return damage;
+    public Double getDamageMultiplier() {
+        return damageMultiplier;
     }
 
-    public void setDamage(int damage) {
-        this.damage = damage;
+    public void setDamageMultiplier(Double damageMultiplier) {
+        this.damageMultiplier = damageMultiplier;
     }
 }

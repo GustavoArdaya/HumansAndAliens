@@ -53,4 +53,12 @@ public class Entity {
     public void setLevel(int level) {
         this.level = level;
     }
+
+    public void receiveDamage(int damage) {
+        this.health -= damage;
+    }
+
+    public void dealDamage(Entity entity, int damage) {
+        entity.receiveDamage(damage);
+    }
 }

@@ -15,9 +15,15 @@ class AlienTest {
     }
 
     @Test
-    void alienShouldHave100Health() {
+    void alienShouldStartWith100Health() {
         var sut = testAlien.getHealth();
         assertEquals(100, sut);
+    }
+
+    @Test
+    void alienShouldStartWithLevel1() {
+        var sut = testAlien.getLevel();
+        assertEquals(1, sut);
     }
 
     @Test

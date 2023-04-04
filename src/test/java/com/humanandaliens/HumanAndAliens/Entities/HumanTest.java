@@ -15,9 +15,15 @@ class HumanTest {
     }
 
     @Test
-    void humanShouldHave100Health() {
+    void humanShouldStartWith100Health() {
         var sut = testHuman.getHealth();
         assertEquals(100, sut);
+    }
+
+    @Test
+    void humanShouldStartWithLevel1() {
+        var sut = testHuman.getLevel();
+        assertEquals(1, sut);
     }
 
     @Test

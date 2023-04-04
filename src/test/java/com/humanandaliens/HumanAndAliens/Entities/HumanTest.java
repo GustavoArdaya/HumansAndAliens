@@ -5,19 +5,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AlienTest {
+class HumanTest {
 
-    Alien testAlien = new Alien("Test Alien");
+    Human testHuman = new Human("Test Human");
     @BeforeEach
     void setUp() {
 
     }
 
     @Test
-    void alienShouldHave100Health() {
-        var sut = testAlien.getHealth();
+    void humanShouldHave100Health() {
+        var sut = testHuman.getHealth();
         assertEquals(100, sut);
     }
-
 
 }
